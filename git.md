@@ -1,6 +1,6 @@
 # Creating Repositories
 - Repositories can be created remotely on any Source Code Manager or can be created locally.
-## Creating Remote Repository
+## Creating Remote Repository Using GitHub cli 
 - To create a remote repository using github cli, use the following steps:
 ### Login to github:
     1. Login to github: 
@@ -17,3 +17,15 @@
         - gh repo create [<name>] --source [<source directory>]
         - By default, the remote repository name will be the name of the source directory. Pass --push to push any local commits to the new repository.
 
+## Creating Remote Repository Using Git cli
+    1. To start a new repository locally( a project may already exist locally, but it doesn't have Git yet.), initialize the folder as a git repository:
+        - git init
+    2. Create a remote repository on some SCM like GitHub.com. Then, add the remote URL to your local git repository:
+        -git remote add origin <URL>.
+        (The above command stores the remote URL under a more human-friendly name, origin.)
+    3. Shape your history into at least one commit by using git add to stage the existing files, and git commit to make the snapshot:
+        - [git add <file name>] to add specific file
+        - [git add .] to add all files
+        - git commit -m <"message">
+    4. Once there is at least one commit, the changes can be pushed to the remote and set up the tracking relationship for good with:
+        - git push -u origin master.
