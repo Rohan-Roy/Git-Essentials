@@ -21,7 +21,7 @@
     1. To start a new repository locally( a project may already exist locally, but it doesn't have Git yet.), initialize the folder as a git repository:
         - git init
     2. Create a remote repository on some SCM like GitHub.com. Then, add the remote URL to your local git repository:
-        -git remote add origin <URL>.
+        -git remote add origin <URL>
         (The above command stores the remote URL under a more human-friendly name, origin.)
     3. Shape your history into at least one commit by using git add to stage the existing files, and git commit to make the snapshot:
         - [git add <file name>] to add specific file
@@ -29,3 +29,14 @@
         - git commit -m <"message">
     4. Once there is at least one commit, the changes can be pushed to the remote and set up the tracking relationship for good with:
         - git push -u origin master.
+
+## Creating Local Repository When Remote Already Exists
+    1. If remote repository doesn't contain any commit or any file, local folder could be set to track remote by:
+        - git init
+        - git remote add origin <URL>
+    2. If remote repository contains commits, bring the repository to local by:
+        - git clone
+    3. Add changes to the remote by:
+        - git add
+        - git commit
+        - git push
