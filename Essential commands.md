@@ -1,4 +1,7 @@
 # Essential Git Commands
+
+## git init:
+    Initialize a directory as a git repository.
 ## git clone [url]: 
     Clone (download) a repository that already exists on some Source Code Management System, including all of the files, branches, and commits.
 ## git status: 
@@ -7,6 +10,8 @@
     This shows the associated remote repositories and their stored name, like origin.
 ## git remote add origin <url>: 
     Adds a remote so one can collaborate with others on a newly initialized repository.
+## git remote set-url origin new.git.url/:
+    To update the remote repository url    
 ## git push: 
     Uploads all local branch commits to the remote.
 ## git push -u origin master: 
